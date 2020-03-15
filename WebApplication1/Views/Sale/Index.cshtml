@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BAO.sale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sale</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleCustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleProductId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleCustomerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleProductId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetAmount)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SaleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SaleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SaleId })
+        </td>*@
+    </tr>
+}
+
+</table>

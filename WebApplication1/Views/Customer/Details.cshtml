@@ -1,0 +1,58 @@
+﻿@model BAO.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustFname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustFname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustLname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustLname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPurchaser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPurchaser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
